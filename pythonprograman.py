@@ -3,6 +3,7 @@
 #6 niveles, primeras 6 celdas un nivel,seungas 5 otro, etc
 #Inicilizo las 21 celdas con el vallor 0 (valor asignado para celdas desconocidas)
 list=[0]*21
+num=0
 #Cada celda tiene un booleano, si es ese booleano es true significa que el triangulo donde se encuentra ha sido resuelto,el ciclo seguira mientras existan ciclos false
 class Celda:
 	def __init__(self,pos):
@@ -10,29 +11,39 @@ class Celda:
 		list[self.pos] = int(raw_input("Ingresa valor de celda " + str(num) + ": ") )
 		num+= 1
 		self.calculable=false
+		self.hijoizquierda=self.set_Hijo_izq()
+		self.hijoderecha=self.set_Hijo_der()
 		
-	def set_Padre_izq(self):
-		padre_izq=self.pos+self.nivel(self)
-		return self.padre_izq
-	def set_Padre_der(self):
-		padre_der=self.pos+self.nivel(self)
-		return self.padre_der
-	def set_Hijo_izq(self):
-	def set_Hijo_der(self):
+		
+    	def set_hijo_izq(self):
+                if (self.pos >= 16 and self.pos <= 21):
+                        return -1
+                else:
+                        self.v = self.pos + self.get_high()
+                        return self.v
+
+
+        def set_hijo_der(self):
+                if (self.pos >= 16 and self.pos <= 21):
+                        return -1
+                else:
+                        self.v = self.pos + self.get_high() + 1
+                        return self.v
+
 	def calcular(self):
 		
 	def nivel(self):
-		if(self.pos<2)
+		if(self.pos<2):
 			self.nivel=1
-		elif(self.pos<4)
+		elif(self.pos<4):
 			self.nivel=2
-		elif(self.pos<7)
+		elif(self.pos<7):
 			self.nivel=3
-		elif(self.pos<11)
+		elif(self.pos<11):
 			self.nivel=4
-		elif(self.pos<16)
+		elif(self.pos<16):
 			self.nivel=5
-		else 
+		else:
 			self.nivel=6
 	
 	
@@ -42,7 +53,22 @@ class Piramide:
 		i=0
   	
   	def ciclo(self):
-
+		self.resueltos = 0
+                self.resueltos+= Celda1.calcular()
+                self.resueltos+= Celda2.calcular()
+                self.resueltos+= Celda3.calcular()
+                self.resueltos+= Celda4.calcular()
+                self.resueltos+= Celda5.calcular()
+                self.resueltos+= Celda6.calcular()
+                self.resueltos+= Celda7.calcular()
+                self.resueltos+= Celda8.calcular()
+                self.resueltos+= Celda9.calcular()
+                self.resueltos+= Celda10.calcular()
+                self.resueltos+= Celda11.calcular()
+                self.resueltos+= Celda12.calcular()
+                self.resueltos+= Celda13.calcular()
+                self.resueltos+= Celda14.calcular()
+                self.resueltos+= Celda15.calcular()	
  
   		
 
