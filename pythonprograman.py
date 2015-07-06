@@ -5,7 +5,7 @@
 #Inicilizo las 21 celdas con el vallor 0 (valor asignado para celdas desconocidas)
 import time
 sinresolver = []
-list=[0]*22
+list=[0]*22 #22 entradas con 0s 
 num=0
 class Celda:
 	def __init__(self,pos):
@@ -85,7 +85,9 @@ class Piramide:
 
   	
   	def ciclo(self):
+  		#Tiempo de inicio de ejecucion
   		If(time.time() – Start_time)==30:
+  		#Si la cola queda sin elementos o el tiempo llega a 30 segundos el programa finaliza
   			while True: 
 				if not(self.sinresolver):
 					self.imprimir()
