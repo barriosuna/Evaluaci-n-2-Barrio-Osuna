@@ -4,7 +4,7 @@
 #6 niveles, primeras 6 celdas un nivel,seungas 5 otro, etc
 #Inicilizo las 21 celdas con el vallor 0 (valor asignado para celdas desconocidas)
 import time
-
+sinresolver = []
 list=[0]*21
 num=0
 class Celda:
@@ -15,6 +15,7 @@ class Celda:
 		self.hijoizquierda=self.set_Hijo_izq()
 		self.hijoderecha=self.set_Hijo_der()
 		self.level= self.nivel()
+		sinresolver.apend(self)
 		
 		
     def set_Hijo_izq(self):
