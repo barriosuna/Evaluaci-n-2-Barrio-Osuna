@@ -86,17 +86,17 @@ class Piramide(Celda):
     
         #start_time=(time.time())    
         #global start_time
-        global i
         self.ciclo()
         
 
     
     def ciclo(self):
+        global i
         #Tiempo de inicio de ejecucion
-        if(i<10):
         #if((time.time())-(start_time))==300:
         #Si la cola queda sin elementos o el tiempo llega a 30 segundos el programa finaliza
-            while True: 
+        while True:
+            if(i<10):
                 if not(self.sinresolver):
                     self.imprimir()
                     break
@@ -109,9 +109,9 @@ class Piramide(Celda):
                         self.a=self.sinresolver.pop(1)
                         self.sinresolver.append(a)
                         i+=1
-        else:
-            print("No se puede resolver la pirámide")
-            raise SystemExit
+            else:
+                print("No se puede resolver la pirámide")
+                raise SystemExit
             
     def imprimir(self):
         print("La piramide completa")
