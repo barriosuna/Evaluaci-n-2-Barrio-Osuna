@@ -62,22 +62,22 @@ class Piramide:
   		if(time.time() - start_time)==10):
 
   	
-		self.resueltos = 0
-                self.resueltos+= Celda1.calcular()
-                self.resueltos+= Celda2.calcular()
-                self.resueltos+= Celda3.calcular()
-                self.resueltos+= Celda4.calcular()
-                self.resueltos+= Celda5.calcular()
-                self.resueltos+= Celda6.calcular()
-                self.resueltos+= Celda7.calcular()
-                self.resueltos+= Celda8.calcular()
-                self.resueltos+= Celda9.calcular()
-                self.resueltos+= Celda10.calcular()
-                self.resueltos+= Celda11.calcular()
-                self.resueltos+= Celda12.calcular()
-                self.resueltos+= Celda13.calcular()
-                self.resueltos+= Celda14.calcular()
-                self.resueltos+= Celda15.calcular()	
+			self.resueltos = 0
+        		self.resueltos+= Celda1.calcular()
+                	self.resueltos+= Celda2.calcular()
+                	self.resueltos+= Celda3.calcular()
+                	self.resueltos+= Celda4.calcular()
+                	self.resueltos+= Celda5.calcular()
+                	self.resueltos+= Celda6.calcular()
+                	self.resueltos+= Celda7.calcular()
+                	self.resueltos+= Celda8.calcular()
+                	self.resueltos+= Celda9.calcular()
+                	self.resueltos+= Celda10.calcular()
+                	self.resueltos+= Celda11.calcular()
+                	self.resueltos+= Celda12.calcular()
+                	self.resueltos+= Celda13.calcular()
+                	self.resueltos+= Celda14.calcular()
+                	self.resueltos+= Celda15.calcular()	
  
   		
 
@@ -123,6 +123,7 @@ Celda12 = Celda(12)
 Celda13 = Celda(13)
 Celda14 = Celda(14)
 Celda15 = Celda(15)
+Pira=Piramide()
 
 print "La piramide se ingresa desde arriba hacia abajo siendo la posicion numero uno la punta de la piramide"
 
