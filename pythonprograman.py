@@ -117,7 +117,7 @@ class Piramide:
 		
 
 
-print "La piramide se ingresa desde arriba hacia abajo siendo la posicion numero uno la punta de la piramide"
+print ("La piramide se ingresa desde arriba hacia abajo siendo la posicion numero uno la punta de la piramide")
 
 
 Celda1 = Celda(1)
