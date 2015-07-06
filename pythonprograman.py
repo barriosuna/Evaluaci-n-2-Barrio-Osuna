@@ -17,17 +17,16 @@ class Celda:
 		self.level= self.nivel()
 		sinresolver.apend(self)
 		
-		
-    def set_Hijo_izq(self):
-	                if (self.pos <=21 and self.pos >= 16):
+	def set_Hijo_izq(self):
+		if (self.pos <=21 and self.pos >= 16):
                     	return 1
             	else:
                     	self.hijoi = self.pos + self.levell
                     	return self.hijoi
 
 
-        	def set_Hijo_izq(self):
-	                if (self.pos <=21 and self.pos >= 16):
+        def set_Hijo_izq(self):
+                if (self.pos <=21 and self.pos >= 16):
                     	return 1
             	else:
                     	self.hijod = self.pos + self.level +1
