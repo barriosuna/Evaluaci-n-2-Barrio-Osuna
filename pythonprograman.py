@@ -21,7 +21,7 @@ class Celda:
         
     def set_Hijo_izq(self):
             if (self.pos <=21 and self.pos >= 16):
-                return 0
+                return -1
             else:
                 self.hijoi = self.pos + self.nivel()
                 return self.hijoi
@@ -30,7 +30,7 @@ class Celda:
     def set_Hijo_der(self):
         
         if (self.pos <=21 and self.pos >= 16):
-            return 0
+            return -1
         else:
             self.hijod = self.pos + self.nivel()+1
             return self.hijod
@@ -91,7 +91,7 @@ class Piramide(Celda):
     
     def ciclo(self):
         #Tiempo de inicio de ejecucion
-        if((time.time())-(start_time))==30:
+        if((time.time())-(start_time))==300:
         #Si la cola queda sin elementos o el tiempo llega a 30 segundos el programa finaliza
             while True: 
                 if not(self.sinresolver):
@@ -106,7 +106,7 @@ class Piramide(Celda):
                         self.sinresolver.append(a)  
         else:
             print("No se puede resolver la pirámide")
-            quit()
+            raise SystemExit
             
     def imprimir(self):
         print("La piramide completa")
