@@ -81,6 +81,7 @@ class Piramide:
 	def __init__(self):
 	
 		start_time = time.time()
+		self.ciclo()
 
   	
   	def ciclo(self):
@@ -141,5 +142,7 @@ Celda19 = Celda(19)
 Celda20 = Celda(20)
 Celda21 = Celda(21)
 Pira=Piramide()
+
+
 
 
