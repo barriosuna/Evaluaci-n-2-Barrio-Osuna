@@ -1,10 +1,12 @@
 
+
 #misma idea de antes pero  en python, (php era utril para mostrar en una ttabla html, pero aprender el lenguaje de cero es mucho tiempo)
 #6 niveles, primeras 6 celdas un nivel,seungas 5 otro, etc
 #Inicilizo las 21 celdas con el vallor 0 (valor asignado para celdas desconocidas)
+import time
+
 list=[0]*21
 num=0
-#Cada celda tiene un booleano, si es ese booleano es true significa que el triangulo donde se encuentra ha sido resuelto,el ciclo seguira mientras existan ciclos false
 class Celda:
 	def __init__(self,pos):
 		self.pos = pos
@@ -51,8 +53,12 @@ class Piramide:
 	def __init__(self):
 		resueltos=0
 		i=0
+		start_time = time.time()
+
   	
   	def ciclo(self):
+  		
+  	
 		self.resueltos = 0
                 self.resueltos+= Celda1.calcular()
                 self.resueltos+= Celda2.calcular()
@@ -75,7 +81,7 @@ class Piramide:
   		if(resueltos==15):
   			self.imprimir(self)
   		else:
-  			if(i==15)
+  			if()
   				print("no es posible resolverla")
   			else:
   				i+=1
@@ -92,7 +98,9 @@ class Piramide:
 		print(" " +" " +" " +" " +" "+" " +str(list[7])+" " +  str(list[8])+" " +str(list[9])+" " +str(list[10]))
 		print(" " +" " +" " +" " +" " +str(list[11])+" " +" " + str(list[12])+" " +" " +str(list[13])+" " +" " +str(list[14])+" " +" " +str(list[15]))
 		print(" " +" " +" " +str(list[16])+ " " +" " +str(list[17])+" " +" " +str(list[18])+" " +" " +str(list[19])+" " +" " +str(list[20])+" " +" " +str(list[21]))
-				
+		tiempofinal=(time.time() - start_time))
+		print("el programa finalio en"+" "+i+"pasadas"+"ejecutadas en" + tiempofinal+" segundos")	
+		
 
 
 
