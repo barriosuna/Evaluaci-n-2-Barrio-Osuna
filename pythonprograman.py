@@ -56,38 +56,21 @@ class Piramide:
   				self.ciclo(self)
 
   			
-		
-	#ciclo con las pasadas
 	def imprimir(self):
-  		# Opcion Uno
-  		print "Piramide resulta \n"
-		print(' '+'  '+ '  '+'  '++ '  '+'  '+str(list[1])
-		print('  '+'  '+'  '+'  '+'  '+str(list[2])+ str(list[3))
-		print('  '+'   ''  '+'  '+str(list[4])+  str(list[5])+str(list[6))
-		print('   '+'  '+'  '+str(list[7])+  str(list[8])+str(list[9)+str(list[10])))
-		print('  '+'  '+str(list[11])+ str(list[12])+str(list[13])+str(list[14])+str(list[15]))
-		print(str(list[16])+ str(list[17])+str(list[18])+str(list[19])+str(list[20])+str(list[21]))
-		#Opcion Dos
-		import HTML
-	#list=[0,78,41,37,23,18,19,13,10,8,11,6,7,3,5,6,2,4,3,0,5,1]
-		table_data = [
-	        	['         ','Piramide:'],
-	        	[' ',' ','  ',list[1],' ', '  '],
-		        [' ', '    ',list[2],list[3],' ', '  '],
-		        [' ',' ' ,list[4],list[5],list[6],' '],
-		        ['  ',list[7],list[8],list[9],list[10],'  '],
-		        [' ',list[11],list[12],list[13],list[14],list[15]],
-		        [list[16],list[17],list[18],list[19],list[20],list[21]],
-			    ]
-		htmlcode = HTML.table(table_data)
-		print htmlcode
+	 	print("La piramide completa")
+		print(" " +" " +" " +" " +" " +" " +" " +" " +" " +" " +str(list[1]))
+
+		print(" " +" " +" " +" " +" " +" " +" " +" " +" " +str(list[2])+ " " +str(list[3]))
+
+		print(" " +" " +" " +" " +" " +" " +" " +str(list[4])+" " +  str(list[5])+" " +str(list[6]))
+		print(" " +" " +" " +" " +" "+" " +str(list[7])+" " +  str(list[8])+" " +str(list[9])+" " +str(list[10]))
+		print(" " +" " +" " +" " +" " +str(list[11])+" " +" " + str(list[12])+" " +" " +str(list[13])+" " +" " +str(list[14])+" " +" " +str(list[15]))
+		print(" " +" " +" " +str(list[16])+ " " +" " +str(list[17])+" " +" " +str(list[18])+" " +" " +str(list[19])+" " +" " +str(list[20])+" " +" " +str(list[21]))
+				
 
 
 
-#buscar como declarar en un for
-#for i in range(21):
-#	Celdai = Celda(i)
-#Op Dos 
+
 Celda1 = Celda(1)
 Celda2 = Celda(2)
 Celda3 = Celda(3)
