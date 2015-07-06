@@ -79,8 +79,7 @@ class Celda:
 	
 class Piramide:
 	def __init__(self):
-		resueltos=0
-		i=0
+	
 		start_time = time.time()
 
   	
@@ -112,7 +111,7 @@ class Piramide:
 		print(" " +" " +" " +" " +" " +str(list[11])+" " +" " + str(list[12])+" " +" " +str(list[13])+" " +" " +str(list[14])+" " +" " +str(list[15]))
 		print(" " +" " +" " +str(list[16])+ " " +" " +str(list[17])+" " +" " +str(list[18])+" " +" " +str(list[19])+" " +" " +str(list[20])+" " +" " +str(list[21]))
 		tiempofinal=(time.time() - start_time))
-		print("el programa finalio en"+" "+i+"pasadas"+"ejecutadas en" + tiempofinal+" segundos")	
+		print("el programa finalio en"+" "+tiempofinal+" segundos")	
 		
 
 
