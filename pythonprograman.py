@@ -59,7 +59,7 @@ class Celda:
                         		return 1
                	else:
                        
-            			print("error, no se puede resolver")
+            			print("Error, la pirámide no se puede resolver")
                		quit()
 		
 	def nivel(self):
@@ -98,7 +98,7 @@ class Piramide:
 						self.a=self.sinresolver.pop(1)
 						self.sinresolver.append(a)	
   				else:
-  					print("no se puede resolver")
+  					print("No se puede resolver la pirámide")
   					quit()
   			
 	def imprimir(self):
@@ -112,11 +112,11 @@ class Piramide:
 		print(" " +" " +" " +" " +" " +str(list[11])+" " +" " + str(list[12])+" " +" " +str(list[13])+" " +" " +str(list[14])+" " +" " +str(list[15]))
 		print(" " +" " +" " +str(list[16])+ " " +" " +str(list[17])+" " +" " +str(list[18])+" " +" " +str(list[19])+" " +" " +str(list[20])+" " +" " +str(list[21]))
 		tiempofinal=(time.time() - start_time))
-		print("el programa finalio en"+" "+tiempofinal+" segundos")	
+		print("El programa finalizo en"+" "+tiempofinal+" segundos")	
 		
 
 
-print ("La piramide se ingresa desde arriba hacia abajo siendo la posicion numero uno la punta de la piramide")
+print ("La piramide se ingresa desde arriba hacia abajo siendo la posicion numero uno la punta de la piramide:")
 
 
 Celda1 = Celda(1)
