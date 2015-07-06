@@ -7,6 +7,7 @@ import time
 sinresolver = []
 list=[0]*22 #22 entradas con 0s 
 num=1
+i=0
 class Celda:
     def __init__(self,pos):
         self.pos = pos
@@ -83,15 +84,17 @@ class Celda:
 class Piramide(Celda):
     def __init__(self):
     
-        start_time=(time.time())
-        global start_time
+        #start_time=(time.time())    
+        #global start_time
+        global i
         self.ciclo()
         
 
     
     def ciclo(self):
         #Tiempo de inicio de ejecucion
-        if((time.time())-(start_time))==300:
+        if(i<10):
+        #if((time.time())-(start_time))==300:
         #Si la cola queda sin elementos o el tiempo llega a 30 segundos el programa finaliza
             while True: 
                 if not(self.sinresolver):
@@ -101,9 +104,11 @@ class Piramide(Celda):
                     self.primero=self.sinresolver[1]
                     if(self.primero.calcular==1):
                         self.sinresolver.remove(primero)
+                        i+=1
                     else:
                         self.a=self.sinresolver.pop(1)
-                        self.sinresolver.append(a)  
+                        self.sinresolver.append(a)
+                        i+=1
         else:
             print("No se puede resolver la pirámide")
             raise SystemExit
