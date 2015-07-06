@@ -5,7 +5,7 @@
 #Inicilizo las 21 celdas con el vallor 0 (valor asignado para celdas desconocidas)
 import time
 sinresolver = []
-list=[0]*21
+list=[0]*22
 num=0
 class Celda:
 	def __init__(self,pos):
@@ -34,20 +34,19 @@ class Celda:
                     	return self.hijod
 
 	def calcular(self):
+		
+		if(list[self.pos]== 0 and list[self.hijoderecha] != 0 and list[self.hijoizquierda] != 0):
+	               	 list[self.pos] = list[self.hijoderecha] + list[self.hijoizquierda]
+
+		elif(list[self.pos]!= 0 and list[self.hijoderecha] != 0 and list[self.hijoizquierda] == 0):
+	               		list[self.hijoizquierda] = list[self.pos] - list[self.hijoderecha]
 
 
-		if(v[self.pos]== 0 and v[self.hijoderecha] != 0 and v[self.hijoizquierda] != 0):
-	               	 v[self.pos] = v[self.hijoderecha] + v[self.hijoizquierda]
-
-		elif(v[self.pos]!= 0 and v[self.hijoderecha] != 0 and v[self.hijoizquierda] == 0):
-	               		v[self.hijoizquierda] = v[self.pos] - v[self.hijoderecha]
+		elif(list[self.pos]!= 0 and list[self.hijoderecha] == 0 and list[self.hijoizquierda] != 0):
+	               	list[self.hijoderecha] = list[self.pos] - list[self.hijoizquierda]
 
 
-		elif(v[self.pos]!= 0 and v[self.hijoderecha] == 0 and v[self.hijoizquierda] != 0):
-	               	v[self.hijoderecha] = v[self.pos] - v[self.hijoizquierda]
-
-
-		if(v[self.pos]!= 0 and v[self.hijoderecha] != 0 and v[self.hijoizquierda] != 0):
+		if(list[self.pos]!= 0 and list[self.hijoderecha] != 0 and list[self.hijoizquierda] != 0):
 	        	self.a = self.cacl()
 	               	if(self.a == 1):
 	                	return 1
@@ -56,7 +55,7 @@ class Celda:
 		
 	
       	def calc(self):
-               	 if (v[self.pos] == v[self.hijoderecha] + v[self.hijoizquierda]):
+               	 if (list[self.pos] == list[self.hijoderecha] + list[self.hijoizquierda]):
                         		return 1
                	else:
                        
@@ -135,6 +134,13 @@ Celda12 = Celda(12)
 Celda13 = Celda(13)
 Celda14 = Celda(14)
 Celda15 = Celda(15)
+
+Celda16 = Celda(16)
+Celda17 = Celda(17)
+Celda18 = Celda(18)
+Celda19 = Celda(19)
+Celda20 = Celda(20)
+Celda21 = Celda(21)
 Pira=Piramide()
 
 
