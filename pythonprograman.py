@@ -3,7 +3,7 @@
 #6 niveles, primeras 6 celdas un nivel,seungas 5 otro, etc
 #Inicilizo las 21 celdas con el vallor 0 (valor asignado para celdas desconocidas)
 list=[0]*21
-#Cada celda tiene un booleano, si es ese booleano es true significa que el triangulo donde se encuentra ha sido resolvido,el ciclo seguira mientras existan ciclos false
+#Cada celda tiene un booleano, si es ese booleano es true significa que el triangulo donde se encuentra ha sido resuelto,el ciclo seguira mientras existan ciclos false
 class Celda:
 	def __init__(self,pos):
 		self.pos = pos
