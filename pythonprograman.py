@@ -3,11 +3,13 @@
 #misma idea de antes pero  en python, (php era utril para mostrar en una ttabla html, pero aprender el lenguaje de cero es mucho tiempo)
 #6 niveles, primeras 6 celdas un nivel,seungas 5 otro, etc
 #Inicilizo las 21 celdas con el vallor 0 (valor asignado para celdas desconocidas)
+#PYTHON 2.7.10
 import time
 sinresolver = []*16
 list=[0]*22 #22 entradas con 0s 
 num=1
 i=0
+start_time=0
 class Celda:
     def __init__(self,pos):
         self.pos = pos
@@ -104,22 +106,26 @@ class Piramide(Celda):
 
 
     
-        #start_time=(time.time())    
-        #global start_time
         self.ciclo()
         
 
     
     def ciclo(self):
+        global start_time
+        start_time=(time.time())    
         global i
+        #print("el tiempo:"+str(start_time))
         #Tiempo de inicio de ejecucion
         #if((time.time())-(start_time))==300:
-        #Si la cola queda sin elementos o el tiempo llega a 30 segundos el programa finaliza
-        print("lista" +str(list[2]))
-        print("si resolver" + str(sinresolver[3]))
+        #Si la cola queda sin elementos o el tiempo llega a 500 segundos el programa finaliza
+        #print("lista" +str(list[2]))
+        #print("si resolver" + str(sinresolver[3]))
         #while i<10000000:
+        #El time era en nano/micro segundos, me volvi loco arrenglandolo.
         while True:
-            if(i<100003):
+            #print("el tiempo:"+str((time.time())-(start_time)))
+
+            if((time.time())-(start_time)<500000000000000):
                 if not(sinresolver):
                     self.imprimir()
                     break
@@ -141,14 +147,14 @@ class Piramide(Celda):
         print("La piramide completa")
         print(" " +" " +" " +" " +" " +" " +" " +" " +" " +" " +str(list[1]))
 
-        print(" " +" " +" " +" " +" " +" " +" " +" " +" " +str(list[2])+ " " +str(list[3]))
+        print(" " +" " +" " +" " +" " +" " +" " +" " +str(list[2])+ " " +str(list[3]))
 
-        print(" " +" " +" " +" " +" " +" " +" " +str(list[4])+" " +  str(list[5])+" " +str(list[6]))
-        print(" " +" " +" " +" " +" "+" " +str(list[7])+" " +  str(list[8])+" " +str(list[9])+" " +str(list[10]))
-        print(" " +" " +" " +" " +" " +str(list[11])+" " +" " + str(list[12])+" " +" " +str(list[13])+" " +" " +str(list[14])+" " +" " +str(list[15]))
-        print(" " +" " +" " +str(list[16])+ " " +" " +str(list[17])+" " +" " +str(list[18])+" " +" " +str(list[19])+" " +" " +str(list[20])+" " +" " +str(list[21]))
-        #tiempofinal=((time.time())-(start_time))
-       # print("El programa finalizo en"+" "+tiempofinal+" segundos")    
+        print(" " +" " +" " +" " +" " +" " +str(list[4])+" " +" " +  str(list[5])+" " +" " +str(list[6]))
+        print(" " +" " +" " +" " +" "+str(list[7])+" " +" " +  str(list[8])+" " +" " +str(list[9])+" " +" " +str(list[10]))
+        print(" " +" " +" " +str(list[11])+" " +" " + str(list[12])+" " +" " +str(list[13])+" " +" " +str(list[14])+" " +" " +str(list[15]))
+        print(" " +" " +str(list[16])+ " " +" " +str(list[17])+" " +" " +str(list[18])+" " +" " +str(list[19])+" " +" " +str(list[20])+" " +" " +str(list[21]))
+        tiempofinal=((time.time())-(start_time))
+        print("El programa finalizo en"+" "+str(tiempofinal)+" segundos "+"transcurrido en " +str(i)+"  "+"pasadas")    
         
 
 
