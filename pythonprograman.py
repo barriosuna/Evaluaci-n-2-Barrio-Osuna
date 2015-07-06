@@ -86,18 +86,21 @@ class Piramide:
 
   	
   	def ciclo(self):
-  		while True: 
-			if not(self.sinresolver):
-				self.imprimir()
-	  			break
-	  		else:
-	  			self.primero=self.sinresolver[1]
-	  			if(self.primero.calcular==1):
-	  				self.sinresolver.remove(primero)
-				else:
-					self.a=self.sinresolver.pop(1)
-					self.sinresolver.append(a)	
-  	
+  		If(time.time() – Start_time)==30:
+  			while True: 
+				if not(self.sinresolver):
+					self.imprimir()
+		  			break
+		  		else:
+		  			self.primero=self.sinresolver[1]
+		  			if(self.primero.calcular==1):
+		  				self.sinresolver.remove(primero)
+					else:
+						self.a=self.sinresolver.pop(1)
+						self.sinresolver.append(a)	
+  				else:
+  					print("no se puede resolver")
+  					quit()
   			
 	def imprimir(self):
 	 	print("La piramide completa")
