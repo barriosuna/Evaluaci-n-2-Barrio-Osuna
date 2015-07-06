@@ -32,8 +32,35 @@ class Celda:
                     	self.hijod = self.pos + self.level +1
                     	return self.hijod
 
-
 	def calcular(self):
+
+
+		if(v[self.pos]== 0 and v[self.hijoderecha] != 0 and v[self.hijoizquierda] != 0):
+	               	 v[self.pos] = v[self.hijoderecha] + v[self.hijoizquierda]
+
+		elif(v[self.pos]!= 0 and v[self.hijoderecha] != 0 and v[self.hijoizquierda] == 0):
+	               		v[self.hijoizquierda] = v[self.pos] - v[self.hijoderecha]
+
+
+		elif(v[self.pos]!= 0 and v[self.hijoderecha] == 0 and v[self.hijoizquierda] != 0):
+	               	v[self.hijoderecha] = v[self.pos] - v[self.hijoizquierda]
+
+
+		if(v[self.pos]!= 0 and v[self.hijoderecha] != 0 and v[self.hijoizquierda] != 0):
+	        	self.a = self.cacl()
+	               	if(self.a == 1):
+	                	return 1
+
+                return 0
+		
+	
+      	def calc(self):
+               	 if (v[self.pos] == v[self.hijoderecha] + v[self.hijoizquierda]):
+                        		return 1
+               	else:
+                       
+            			print("error, no se puede resolver")
+               		quit()
 		
 	def nivel(self):
 		if(self.pos<2):
