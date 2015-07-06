@@ -83,13 +83,15 @@ class Celda:
 class Piramide(Celda):
     def __init__(self):
     
-        start_time = time.time()
+        start_time=(time.time())
+        global start_time
         self.ciclo()
+        
 
     
     def ciclo(self):
         #Tiempo de inicio de ejecucion
-        if((time.time())-(Start_time))==30:
+        if((time.time())-(start_time))==30:
         #Si la cola queda sin elementos o el tiempo llega a 30 segundos el programa finaliza
             while True: 
                 if not(self.sinresolver):
