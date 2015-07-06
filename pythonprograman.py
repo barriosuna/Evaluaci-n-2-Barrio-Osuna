@@ -12,25 +12,26 @@ class Celda:
 		self.pos = pos
 		list[self.pos] = int(raw_input("Ingresa valor de celda " + str(num) + ": ") )
 		num+= 1
-		self.calculable=false
 		self.hijoizquierda=self.set_Hijo_izq()
 		self.hijoderecha=self.set_Hijo_der()
+		self.level= self.nivel()
 		
 		
-    	def set_hijo_izq(self):
-                if (self.pos >= 16 and self.pos <= 21):
-                        return -1
-                else:
-                        self.v = self.pos + self.get_high()
-                        return self.v
+    def set_Hijo_izq(self):
+	                if (self.pos <=21 and self.pos >= 16):
+                    	return 1
+            	else:
+                    	self.hijoi = self.pos + self.levell
+                    	return self.hijoi
 
 
-        def set_hijo_der(self):
-                if (self.pos >= 16 and self.pos <= 21):
-                        return -1
-                else:
-                        self.v = self.pos + self.get_high() + 1
-                        return self.v
+        	def set_Hijo_izq(self):
+	                if (self.pos <=21 and self.pos >= 16):
+                    	return 1
+            	else:
+                    	self.hijod = self.pos + self.level +1
+                    	return self.hijod
+
 
 	def calcular(self):
 		
@@ -58,6 +59,8 @@ class Piramide:
   	
   	def ciclo(self):
   		
+  		if(time.time() - start_time)==10):
+
   	
 		self.resueltos = 0
                 self.resueltos+= Celda1.calcular()
